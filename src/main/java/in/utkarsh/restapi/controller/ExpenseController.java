@@ -4,6 +4,7 @@ import in.utkarsh.restapi.dto.ExpenseDTO;
 import in.utkarsh.restapi.io.ExpenseResponse;
 import in.utkarsh.restapi.service.ExpenseService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,6 +14,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequiredArgsConstructor
+@Slf4j
 public class ExpenseController {
     private final ExpenseService expenseService;
     private final ModelMapper modelMapper;
